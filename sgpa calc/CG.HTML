@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator</title>
+    <!-- <link rel="stylesheet" href="cg.css"> -->
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Rajdhani&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@300&family=Rajdhani&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" media="screen and (max-width:868px)" href="cgphone.css"> -->
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px;   
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        ;
+    }
+
+    .sgpa {
+        font-family: 'Caveat', cursive;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 5rem;
+    }
+
+    .Objects {
+        display: flex;
+        flex-direction: row;
+
+
+    }
+
+    .subjects {
+        font-family: 'Caveat', cursive;
+        font-family: 'Montserrat', sans-serif;
+        padding: 30px;
+    }
+
+    .subhead {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .lab {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .credits {
+        font-family: 'Caveat', cursive;
+        font-family: 'Montserrat', sans-serif;
+        padding: 30px;
+    }
+
+    .credits label {
+        margin: 20px;
+        font-size: 0.8rem;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .subjects label {
+        margin: 5px;
+        font-size: 0.8rem;
+    }
+
+    .creditslab{
+        font-family: 'Caveat', cursive;
+        font-family: 'Montserrat', sans-serif;
+        padding: 30px;
+    }
+
+    .subjectslab{
+        font-family: 'Caveat', cursive;
+        font-family: 'Montserrat', sans-serif;
+        padding: 30px;
+    }
+
+    .calculate {
+        text-align: center;
+    }
+
+    .result {
+        text-align: center;
+        margin: 50px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .calc {
+        font-size: 1.2rem;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 5px;
+    }
+
+    .calc:hover {
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width:770px) {
+        body {
+            background-color: rgb(157, 213, 213);
+        }
+
+        .container {
+            width: 100%;
+            margin: 20px;
+        }
+
+        .Objects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+        .result {
+            width: 100%;
+        }
+
+        .credits {
+   
+    padding: 0;
+    /* width: 50vw; */
+}
+
+        .subjects {
+    /* width: 50vw; */
+    padding: 0;
+}
+
+        .sgpa {
+
+            text-align: center;
+            color: rgb(215, 32, 25);
+        }
+    }
+</style>
+
+<body>
+    <div class="Container">
+        <h1 class="sgpa">
+
+            SGPA Calculator 2nd Year SOC
+        </h1>
+        <br>
+        <h3 class="subhead">Theory subjects</h3>
+        <div class="Objects">
+
+            <div class="subjects">
+
+                <ul>
+                    <li> <label for="S3">GRADE : Subject 1</label><select name="credits" id="grade1">
+                            <option value="10">S</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">D</option>
+                            <option value="0">F</option>
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">GRADE : Subject 2</label><select name="credits" id="grade2">
+                            <option value="10">S</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">D</option>
+                            <option value="0">F</option>
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">GRADE : Subject 3</label><select name="credits" id="grade3">
+                            <option value="10">S</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">D</option>
+                            <option value="0">F</option>
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">GRADE : Subject 4</label><select name="credits" id="grade4">
+                            <option value="10">S</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">D</option>
+                            <option value="0">F</option>
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">GRADE : Subject 5</label><select name="credits" id="grade5">
+                            <option value="10">S</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">D</option>
+                            <option value="0">F</option>
+                        </select></li>
+                    <br>
+                </ul>
+            </div>
+            <div class="credits">
+                <ul>
+                    <li> <label for="S3">Credits</label><select name="credits" id="credits1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">Credits</label><select name="credits" id="credits2">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">Credits</label><select name="credits" id="credits3">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">Credits</label><select name="credits" id="credits4">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">Credits</label><select name="credits" id="credits5">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select></li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="subhead">LAB Subjects</h3>
+        <div class="lab">
+            <div class="subjectslab">
+                <ul>
+                    <li><label for="l1">GRADE : LAB 1</label>
+                        <select name="credits" id="grade6">
+                            <option value="10">S</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">D</option>
+                            <option value="0">F</option>
+                        </select>
+                    </li>
+                    <br>
+                    </li>
+
+
+                    <li>
+
+                        <label for="l2">GRADE : LAB 2 </label>
+                        <select name="credits" id="grade7">
+                            <option value="10">S</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B</option>
+                            <option value="6">C</option>
+                            <option value="5">D</option>
+                            <option value="0">F</option>
+                        </select>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="creditslab">
+                <ul>
+                    <li> <label for="S3">Credits</label><select name="credits" id="credits6">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select></li>
+                    <br>
+                    <li> <label for="S3">Credits</label><select name="credits" id="credits7">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+
+                        </select></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="calculate">
+            <button class="calc" onclick="calculate()">Calculate</button>
+        </div>
+
+        <div class="result">
+            Your SGPA is <p id="final"></p>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+    <script>
+
+
+
+
+
+
+        function calculate() {
+            const a1 = document.getElementById('grade1').value;
+            const b1 = document.getElementById('grade2').value;
+            const c1 = document.getElementById('grade3').value;
+            const d1 = document.getElementById('grade4').value;
+            const e1 = document.getElementById('grade5').value;
+            const f1 = document.getElementById('grade6').value;
+            const g1 = document.getElementById('grade6').value;
+
+            const gd1 = parseInt(a1);
+            const gd2 = parseInt(b1);
+            const gd3 = parseInt(c1);
+            const gd4 = parseInt(d1);
+            const gd5 = parseInt(e1);
+            const gd6 = parseInt(f1);
+            const gd7 = parseInt(g1);
+
+
+            const a2 = document.getElementById('credits1').value;
+            const b2 = document.getElementById('credits2').value;
+            const c2 = document.getElementById('credits3').value;
+            const d2 = document.getElementById('credits4').value;
+            const e2 = document.getElementById('credits5').value;
+            const f2 = document.getElementById('credits6').value;
+            const g2 = document.getElementById('credits7').value;
+
+            const cd1 = parseInt(a2);
+            const cd2 = parseInt(b2);
+            const cd3 = parseInt(c2);
+            const cd4 = parseInt(d2);
+            const cd5 = parseInt(e2);
+            const cd6 = parseInt(f2);
+            const cd7 = parseInt(g2);
+
+
+            const sum = cd1 + cd2 + cd3 + cd4 + cd5 + cd6 + cd7;
+            const result = (gd1 * cd1 + gd2 * cd2 + gd3 * cd3 + gd4 * cd4 + gd5 * cd5 + gd6 * cd6 + gd7 * cd7) / sum;
+
+            document.getElementById('final').innerHTML = result.toFixed(1);
+
+        }
+    </script>
+</body>
+
+</html>

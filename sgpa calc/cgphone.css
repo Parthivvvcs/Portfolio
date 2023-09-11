@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(157, 213, 213);
+}
+
+.container{
+    width: 100%;
+    margin: 20px;
+}
+
+.result{
+  width: 100%;
+}

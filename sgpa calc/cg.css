@@ -1,0 +1,84 @@
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin:20px;
+   
+    padding:100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    ;
+}
+
+.sgpa{
+font-family: 'Caveat', cursive;
+font-family: 'Rajdhani', sans-serif;    
+font-size: 5rem;
+}
+
+.Objects{
+    display: flex;
+    flex-direction: row;
+}
+
+.subjects{    
+font-family: 'Caveat', cursive;
+font-family: 'Montserrat', sans-serif;
+padding: 30px;
+}
+
+
+
+.credits{
+font-family: 'Caveat', cursive;
+font-family: 'Montserrat', sans-serif;
+padding: 30px;
+}
+
+.credits label{
+    margin:20px ;
+    font-size: 0.8rem; 
+}
+
+ul{
+list-style: none;
+}
+
+.subjects label{
+    margin: 20px;
+    font-size: 0.8rem;
+}
+
+.calculate{
+text-align: center;
+}
+
+.result{
+text-align: center;
+margin: 50px;
+font-family: 'Montserrat', sans-serif;
+font-size: 1.5rem; 
+}
+
+.calc{
+    font-size: 1.2rem; 
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+.calc:hover{
+    cursor: pointer;
+}
+
